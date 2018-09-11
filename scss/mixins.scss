@@ -1,0 +1,26 @@
+@mixin btn($left, $top, $width, $height) {
+    position: absolute;
+    width: $width;
+    height: $height;
+    top: $top;
+    left: $left;
+    transition-duration: 0.5s;
+}
+
+@mixin icon-bar($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $light;
+    content: "";
+    top: $top;
+}
+
+@mixin bg-image-centered($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    overflow: hidden;
+}

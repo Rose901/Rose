@@ -1,0 +1,74 @@
+
+/********* KEYFRAMES **********/
+
+@keyframes slideDownCustom {
+    0% {
+        transform: translate(0, -40px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes scaleWidthCustom {
+    0% {
+        transform: scale(0, 1.0);
+    }
+    50% {
+        transform: scale(0, 1.0);
+    }
+    100% {
+        transform: scale(1.3, 1.0);
+    }
+}
+
+@keyframes slideUpCustom {
+    0% {
+        transform: translate(0, 40px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        left: -400px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        right: -400px;
+    }
+    to {
+        right: 0px;
+    }
+}
+
+/*** ANIMATION CLASSES ***/
+
+.slide-up {
+    animation-name: slideUpCustom;
+    animation-duration: 1s;
+}
+
+.slide-left {
+    background-color: rgba(232, 232, 215, 0.4);
+    flex: 1;
+    justify-content: center;
+    opacity: 1;
+    animation-name: slide-left;
+    animation-duration: 1.5s;
+}
+
+.slide-right {
+    flex: 1;
+    background-color: rgba(232, 232, 215, 0.4);
+    opacity: 1;
+    animation-name: slide-right;
+    animation-duration: 1.5s;
+}

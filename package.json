@@ -1,0 +1,25 @@
+{
+  "name": "masi",
+  "version": "1.0.0",
+  "description": "wine website",
+  "main": "site.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rose",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.17.6",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.4"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1"
+  }
+}
