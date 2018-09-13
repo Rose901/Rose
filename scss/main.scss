@@ -146,6 +146,15 @@ a {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+
+    & .page-title {
+        text-align: center;
+        margin-left: 50px;
+    }
+
+    .part-01 {
+        margin: 10 15px;
+    }
 }
 
 #page > .row {
@@ -186,9 +195,10 @@ a:hover {
 }
 
 .text-subtitle {
-    margin-top: 4em;
+    margin-top: 2em;
     margin-bottom: .8em;
     font-style: italic;
+    font-size: 1em;
     width: 100%;
     text-align: center;
 }
@@ -204,7 +214,7 @@ a:hover {
 }
 
 a.pretty-link {
-    background-color: rgba(232, 232, 215, 0.4);
+    background-color: white;
     color: #191919;
     position: relative;
     display: block;
