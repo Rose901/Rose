@@ -9,9 +9,9 @@ var concat = require('gulp-concat');
 
 var dist = './dist';
 var src = {
-    all_scss: 'scss/**/*.scss',
-    scss: 'scss/main.scss',
-    js: 'js/*.js',
+    all_scss: 'src/scss/**/*.scss',
+    scss: 'src/scss/main.scss',
+    js: 'src/js/*.js',
     maps: '',
     css: 'css',
     html: 'src/html/*.html',
@@ -55,7 +55,7 @@ gulp.task('js', function () {
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/popper.js/dist/umd/popper.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js',
-        './js/site.js',
+        './src/js/site.js',
     ])
         //.pipe(uglify())
         .pipe(concat('site.min.js'))

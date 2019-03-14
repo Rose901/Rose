@@ -24,6 +24,10 @@
     }
 }
 
+
+
+
+
 @keyframes slideUpCustom {
     0% {
         transform: translate(0, 40px);
@@ -55,6 +59,10 @@
 }
 
 /*** ANIMATION CLASSES ***/
+.me-top{
+    margin-top: 3.5em;
+
+}
 
 .slide-up {
     animation-name: slideUpCustom;
@@ -63,7 +71,6 @@
 
 .slide-left {
     background-color: white;
-    flex: 1;
     justify-content: center;
     opacity: 1;
     animation-name: slide-left;
@@ -71,9 +78,27 @@
 }
 
 .slide-right {
-    flex: 1;
     background-color: white;
     opacity: 1;
     animation-name: slide-right;
     animation-duration: 1.5s;
+}
+
+.text-subtitle {
+    margin-top: 2em;
+    margin-bottom: .8em;
+    font-style: italic;
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+.sub-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: .8em;
+}
+
+.slide-right-text {
+    margin: 3em;
 }

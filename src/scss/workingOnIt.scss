@@ -1,0 +1,31 @@
+
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 400px 800px 800px 800px 800px 800px 800px 800px;
+    grid-row-gap: 55px;
+    
+    .grid-item {
+        background-color :#d3f7d3;
+        padding: 20px;
+        
+
+        
+     }
+
+
+    .one{
+        text-align: center;
+        margin-top: 120px;
+       
+    }
+    .two{
+        background-color :#d3f7d3;
+    }
+
+
+
+
+
+
+    }
