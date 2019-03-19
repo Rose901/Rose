@@ -1,5 +1,6 @@
 @import "portfolio-variables";
 @import "bootstrap";
+@import "node_modules/magnific-popup/dist/magnific-popup";
 @import "mixins";
 @import "menu";
 @import "aboutMe";
@@ -30,17 +31,22 @@ h2{
 }
 h1{}
 h2{}
-h4{}*/
+*/
+h4{
+    font-family: Oldtown, fantasy;
+    color: rgb(233, 27, 27);
+    text-shadow: 0 0 3px rgb(223, 217, 221);
+}
 
 
  a {    font-family: Oldtown, fantasy;
-        color: rgb(241, 166, 223);
+        color: #A70A26;
         &:focus, a:hover {
             text-decoration: none;
      }
      &:hover {
         text-decoration: none;
-        color: rgb(230, 9, 156);
+        color: rgb(10, 92, 7);
     }
        
    }

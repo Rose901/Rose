@@ -11,6 +11,7 @@ var dist = './dist';
 var src = {
     all_scss: 'src/scss/**/*.scss',
     scss: 'src/scss/main.scss',
+    fonts: 'src/scss/fonts/*.*',
     js: 'src/js/*.js',
     maps: '',
     css: 'css',
@@ -55,12 +56,17 @@ gulp.task('js', function () {
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/popper.js/dist/umd/popper.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js',
+        './node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
         './src/js/site.js',
     ])
         //.pipe(uglify())
         .pipe(concat('site.min.js'))
         .pipe(gulp.dest(dist))
         .pipe(browserSync.stream());
+});
+
+gulp.task('fonts', function () {
+    return gulp.src(src.fonts).pipe(gulp.dest(dist + '/fonts'))
 });
 
 // HTML
@@ -74,5 +80,5 @@ gulp.task('fileinclude', function () {
         .pipe(reload({ stream: true }))
 });
 
-gulp.task('default', ['sass', 'js', 'fileinclude', 'watch']);
+gulp.task('default', ['sass', 'js', 'fileinclude', 'fonts', 'watch']);
 gulp.task('styles', ['sass']);

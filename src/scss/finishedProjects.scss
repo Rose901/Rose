@@ -1,16 +1,14 @@
 .grid-container-1 {
     display: grid;
     grid-template-columns: auto;
+
     grid-template-rows: 600px 900px 800px 800px 800px 800px 800px 800px;
     grid-row-gap: 55px;
     
     .grid-item {
         padding: 20px;
         background-color:#f0f7f5; 
-        
-       
-        
-    }
+        }
     
     
     p{
@@ -21,11 +19,13 @@
 
     
         .one{
-            background: #ffffff;
+            display: grid;
+            width:100%;
             align-self: center;
             text-align: center;
             .title-style{
             background-color:  #f0f7f5;
+            width:300px;
             height: 350px;
             padding: 20px 0;
             
@@ -52,6 +52,7 @@
             
             
           img{
+              
               width: 400px;
               height:650px ;
               float:left;
@@ -59,10 +60,12 @@
             
             padding-top:50px;
             .repiling-website{
-              text-align:  center;
-             
-              
-              h5{
+               
+                width:100%;
+                height: auto;
+                margin-top: 30px;
+                text-align: center;
+             h5{
                   color:red;
               }
             }
