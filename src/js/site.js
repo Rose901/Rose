@@ -1,3 +1,4 @@
+var mobileBreakpoint = 600;
 
 
 function step1() {
@@ -27,8 +28,40 @@ function step4() {
     }, 1000);
 }
 
+function refreshBlockStyles() {
+    if ($("#homepage").width() < mobileBreakpoint) {
+        $("#block1").removeAttr("style");
+    } else {
+        $("#block1").width("50vw");
+    }
+}
+
+function refreshSliders() {
+    // stillWorkingOnIt
+    if ($(window).width() < mobileBreakpoint) {
+        $('.slider-for').hide();
+    } else {
+        $('.slider-for').show();
+    }
+
+}
 $(document).ready(function () {
-    step1();
+
+    // todo: if (window.matchMedia("(max-width: 768px)").matches) {
+    if ($('#homepage').width() >= mobileBreakpoint) {
+        // Start all the animations
+        step1();
+    }
+
+    // Hook the resize event to handle transitions
+    // between desktop and mobile and back
+    $(window).resize(function () {
+        refreshBlockStyles();
+        refreshSliders();
+    });
+
+
+
     $("#icon-menu-page").hide();
 
     $('.menu').click(function () {
@@ -39,22 +72,31 @@ $(document).ready(function () {
 
 
     // working on it page
-
     $('.slider-for').slick({
         slidesToShow: 1,
-        slidesToScroll: 1,
         arrows: false,
         fade: true,
         asNavFor: '.slider-nav'
     });
     $('.slider-nav').slick({
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
+        mobileFirst: true,
         asNavFor: '.slider-for',
         dots: true,
         centerMode: true,
-        focusOnSelect: true
+        focusOnSelect: true,
+        responsive: [{
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 3,
+                infinite: true
+
+            }
+        }]
     });
+    // Ensure sliders are correctly visible on page load
+    refreshSliders();
 
     $('.web-detail-intrduce').magnificPopup({
         type: 'image',

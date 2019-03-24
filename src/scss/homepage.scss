@@ -1,0 +1,168 @@
+#homepage {
+    display: flex;
+    flex-direction: column;
+
+    .block {
+        width: 100%;
+        text-align: center;
+
+        //align-items: center;
+        padding: 100px 0;
+
+        h2 {
+            font-size: 32px;
+        }
+
+        a {
+            font-size: 28px;
+        }
+    }
+
+    #block1 {
+        display: flex;
+        justify-content: center;
+
+        @include bg-image-centered("../img/rosephoto.jpg");
+
+        .title-block {
+            opacity: 0.9;
+            font-style: oblique;
+            padding: 15px 20px;
+            margin: 200px 0;
+            background-color: #d3f7d3;
+        }
+    }
+
+    #block2 {
+        background-color: white;
+    }
+
+    #block3 {
+        background-color: #d3f7d3;
+    }
+
+    #block4 {
+        background-color: aliceblue;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #homepage {
+        display: inline-block;
+        left: 0vw;
+        right: 0vw;
+        bottom: 0vw;
+        top: 0vw;
+        position: absolute;
+
+        .title-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+
+            h2 {
+                animation: slideDownCustom 0.5s;
+                color: black;
+            }
+
+            h4 {
+                animation: slideUpCustom 0.5s;
+            }
+
+            h2::after {
+                display: block;
+                content: "";
+                background: black;
+                height: 1px;
+                width: 100%;
+                transform: scale(1.15, 1);
+                transition: transform ease-in-out .2s;
+                animation: scaleWidthCustom 1.0s;
+            }
+
+            &:hover {
+                h2::after {
+                    background: rgb(10, 92, 7);
+                    transform: scale(1, 1);
+                    transition: transform ease-in-out .2s;
+                }
+            }
+        }
+
+        #block1 {
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+
+            @include bg-image-centered("../img/rosephoto.jpg");
+
+            img {
+                width: 300px;
+                height: 400px;
+            }
+
+            .title-block {
+                margin-top: 50px;
+                position: absolute;
+                font-style: oblique;
+                width: 450px;
+                height: 115px;
+                padding: 15px;
+                background-color: #d3f7d3;
+                opacity: 0.5;
+            }
+
+            //border-right: 20px solid rgb(177, 48, 48);
+       
+        }
+
+        #block2 {
+            position: absolute;
+            right: 00vw;
+            left: 100vw;
+            bottom: 0vw;
+            top: 0vh;
+            background-color: white;
+            width: 50vw;
+
+            //rgb(252, 248, 248);
+            //border-bottom: 1px solid white;
+       
+        }
+
+        /*#block2-2 {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("../img/rose-block2.jpg");
+        }*/
+        #block3 {
+            background-color: #d3f7d3;
+
+            //border-bottom: 1px solid white;
+            position: absolute;
+            width: 50vw;
+            left: 50vw;
+            bottom: 0;
+            top: 100vh;
+        }
+
+        #block4 {
+            position: absolute;
+            background-color: aliceblue;
+
+            //#bfd8e4;
+            width: 50vw;
+            bottom: 0;
+            top: 100vh;
+            left: 50vw;
+        }
+    }
+}
