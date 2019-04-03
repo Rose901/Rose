@@ -71,37 +71,38 @@ $(document).ready(function () {
 
     });
 
+    if ($.fn.slick) {
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            mobileFirst: true,
+            asNavFor: '.slider-for',
+            dots: true,
+            arrows: false,
+            centerMode: true,
+            focusOnSelect: true,
+            infinite: true,
 
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        mobileFirst: true,
-        asNavFor: '.slider-for',
-        dots: true,
-        arrows: false,
-        centerMode: true,
-        focusOnSelect: true,
-        infinite: true,
-
-        responsive: [{
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 3,
-                arrows: true
-            }
-        }]
-    });
+            responsive: [{
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    arrows: true
+                }
+            }]
+        });
+    }
 
     // Ensure sliders are correctly visible on page load
     refreshSliders();
 
-    $('.web-detail-intrduce').magnificPopup({
+    $('.web-detail-introduce').magnificPopup({
         type: 'image',
         delegate: 'a',
         gallery: {
@@ -155,6 +156,7 @@ function onmouseover(changeWidth) {
 })(jQuery);
 
 function startAnimatingVisibleElements() {
+    console.log('here')
     $(".animatable").each(function (i, el) {
         var jElement = $(el);
         if (jElement.visible(true) && !jElement.hasClass("animated")) {

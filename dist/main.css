@@ -7715,8 +7715,8 @@ img.mfp-img {
 .slick-next {
   position: absolute;
   display: block;
-  height: 20px;
-  width: 20px;
+  height: 34px;
+  width: 34px;
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
@@ -7743,27 +7743,27 @@ img.mfp-img {
   .slick-prev:before,
   .slick-next:before {
     font-family: slick;
-    font-size: 22px;
-    line-height: 1;
+    font-size: 34px;
+    line-height: 0;
     color: #8b9f60;
-    opacity: 0.75;
+    opacity: 0.8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev {
-  left: -25px; }
+  left: -45px; }
   [dir="rtl"] .slick-prev {
     left: auto;
-    right: -25px; }
+    right: -45px; }
   .slick-prev:before {
     content: "←"; }
     [dir="rtl"] .slick-prev:before {
       content: "→"; }
 
 .slick-next {
-  right: -25px; }
+  right: -45px; }
   [dir="rtl"] .slick-next {
-    left: -25px;
+    left: -45px;
     right: auto; }
   .slick-next:before {
     content: "→"; }
@@ -7772,11 +7772,11 @@ img.mfp-img {
 
 /* Dots */
 .slick-dotted.slick-slider {
-  margin-bottom: 30px; }
+  margin-bottom: 50px; }
 
 .slick-dots {
   position: absolute;
-  bottom: -25px;
+  bottom: -30px;
   list-style: none;
   display: block;
   text-align: center;
@@ -7815,34 +7815,50 @@ img.mfp-img {
         width: 20px;
         height: 20px;
         font-family: slick;
-        font-size: 6px;
+        font-size: 9px;
         line-height: 20px;
         text-align: center;
-        color: black;
+        color: #efefef;
         opacity: 0.25;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
     .slick-dots li.slick-active button:before {
-      color: black;
-      opacity: 0.75; }
+      color: #efefef;
+      opacity: 0.8; }
 
 .workingOnIt {
-  text-align: center;
-  text-align: justify; }
+  text-align: center; }
   .workingOnIt .bold-font {
     color: #8b9f60;
     font-weight: bold; }
   .workingOnIt h4 {
-    margin-top: 40px;
+    margin: 60px auto;
     color: #8b9f60; }
+  .workingOnIt .dark-part {
+    background-color: #2e2929;
+    color: #efefef;
+    padding: 40px 0; }
   .workingOnIt .mySlides img {
     width: 100%; }
   .workingOnIt img {
     width: 60%; }
-  .workingOnIt .web-detail-introduce .click-big-img {
-    padding: 50px auto; }
-    .workingOnIt .web-detail-introduce .click-big-img h5 {
-      margin: 20px auto; }
+  .workingOnIt .web-introduce {
+    text-align: justify;
+    font-size: 18px;
+    color: #2e2929;
+    letter-spacing: 1px;
+    width: 70%;
+    margin: 70px auto;
+    padding-bottom: 40px;
+    text-align: justify; }
+    .workingOnIt .web-introduce.light {
+      color: #efefef; }
+  .workingOnIt .web-detail-introduce {
+    margin-bottom: 40px; }
+    .workingOnIt .web-detail-introduce .click-big-img {
+      padding: 50px auto; }
+      .workingOnIt .web-detail-introduce .click-big-img h5 {
+        margin: 20px auto; }
   .workingOnIt .title-part {
     text-align: center;
     width: 100%;
@@ -7851,7 +7867,8 @@ img.mfp-img {
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-bottom: 80px; }
     .workingOnIt .title-part .title-coding-icon .icon-img {
       width: 30px;
       height: 30px;
@@ -7889,24 +7906,17 @@ img.mfp-img {
         margin-bottom: 150px; }
       .workingOnIt > .project-part h4 {
         font-size: 28px; }
-      .workingOnIt > .project-part > .web-introduce {
-        text-align: center;
-        font-size: 18px;
-        color: black;
-        letter-spacing: 1px;
-        width: 70%;
-        margin: 50px auto;
-        padding-bottom: 40px;
-        text-align: justify; }
-      .workingOnIt > .project-part > .slider-nav {
+      .workingOnIt > .project-part .slider-nav {
+        position: relative;
         width: 60%;
         margin-left: auto;
         margin-right: auto; }
-      .workingOnIt > .project-part > .slider-for {
+      .workingOnIt > .project-part .slider-for {
         width: 60%;
+        display: none;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 150px; }
+        margin-bottom: 50px; }
     .workingOnIt .web-detail-introduce .click-big-img {
       display: -ms-flexbox;
       display: flex;
