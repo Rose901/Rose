@@ -2,12 +2,13 @@
 @import "bootstrap";
 @import "node_modules/magnific-popup/dist/magnific-popup";
 @import "mixins";
+@import "keyframes";
 @import "menu";
 @import "homepage";
 @import "aboutMe";
 @import "contactMe";
-@import "finishedProjects";
-@import "workingOnIt";
+@import "CompletedProjects";
+@import "ProjectsInProgress";
 
 html.scrollable {
     overflow-y: scroll;
@@ -25,87 +26,89 @@ body {
     // font-family: 'Playfair Display', serif;
 }
 
-a {
-    font-family: Oldtown, fantasy;
-    color: gray;
+html, body {
+    h2 {
+        //font-family: "Comic Sans MS", cursive, sans-serif;
 
-    &:focus, a:hover {
-        text-decoration: none;
+        //font-family: 'Germania One', cursive;
+
+        //font-family: 'Playball', cursive;
+
+        //font-family: 'Economica', sans-serif;
+
+        //font-family: 'Kreon', serif; //....ok
+
+        //font-family: 'Antic Slab', serif;
+
+        //font-family: 'Goudy Bookletter 1911', serif;
+
+        //font-family: 'Oxygen Mono', monospace;
+
+        //font-family: 'Flavors', cursive;  .....same with before
+
+        //font-family: 'Unkempt', cursive; ....same
+
+        font-family: 'Kranky', cursive;
+
+        //font-family: cursive;
+        font-size: 32px;
+        animation: slideDownCustom 0.5s;
+        color: $grey;
     }
 
-    &:hover {
-        text-decoration: none;
-        color: rgb(10, 92, 7);
+    h4 {
+        font-family: Oldtown, fantasy;
+
+        //font-family: 'Cutive Mono', monospace;
+        color: $green;
+        animation: slideUpCustom 0.5s;
+
+        /* &:hover {
+             text-decoration: none;
+             color: $green;
+             font-weight: bold;
+         }*/
+    }
+
+    h5 {}
+
+    p {
+        //font-family: 'Courier New', Courier, monospace;
+        //font-family: 'Inconsolata', monospace;
+
+        //font-family: 'Cousine', monospace;
+
+        //font-family: 'IBM Plex Mono', monospace;
+
+        //font-family: 'Nanum Gothic Coding', monospace;
+        font-family: 'Montserrat', sans-serif;
+
+        &.p-text {
+            text-align: justify;
+            text-justify: inter-word;
+        }
     }
 }
 
-h2 {
-    font-family: cursive;
-}
-
-h4 {
-    font-family: Oldtown, fantasy;
-    color: rgb(233, 27, 27);
-
-    //text-shadow: 0 0 3px rgb(223, 217, 221);
-}
-
-/*h2 {
-    font-family: cursive;
-
-    
-}
-
-
-h4 {
-    font-family: Oldtown, fantasy;
-    color: rgb(233, 27, 27);
-
-    //text-shadow: 0 0 3px rgb(223, 217, 221);
-}
-
-a {
-    font-family: Oldtown, fantasy;
-    color: gray;
-
-    &:focus, a:hover {
-        text-decoration: none;
-    }
-
-    &:hover {
-        text-decoration: none;
-        color: rgb(10, 92, 7);
-    }
-}
-*/
-#icon-menu-page {
-    left: 0vw;
-    right: 0vw;
-    bottom: 0vw;
-    top: 0vw;
-    background-color: white;
-    position: absolute;
-}
-
-#menu {
-    font-family: 'Cinzel', serif;
-    font-size: 2em;
-    color: gray;
-    text-align: center;
-
-    li {
-        list-style: none;
-        line-height: 0.8em;
-        padding-top: 30px;
-    }
-
-    span {
-        font-size: $font-small;
-        font-style: italic;
-        margin-bottom: 0px;
+   /* &::after {
         display: block;
+        content: "";
+        background: $grey;
+        height: 1px;
+        width: 100%;
+        transform: scale(1, 1);
+        transition: transform ease-in-out .2s;
+        animation: scaleWidthCustom 1.0s;
     }
-}
+
+    &:hover {
+        h2::after {
+            background: $red;
+            transform: scale(1, 1);
+            transition: transform ease-in-out .2s;
+        }
+    }
+    */
 
 /*#homepage {
     left: 0vw;
@@ -222,30 +225,6 @@ a {
     left: 50vw;
 }
 */
-
-#menu li a {
-    &::before,
-    &::after {
-        content: '';
-        display: inline-block;
-        width: 25px;
-        height: 9px;
-        border-top: 1px solid white;
-        transform: scale(0, 1);
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    &:hover::before {
-        transition: all 0.2s ease-in-out 0s;
-        transform: scale(1, 1);
-    }
-
-    &:hover::after {
-        transition: all 0.2s ease-in-out 0s;
-        transform: scale(1, 1);
-    }
-}
 
 /*.slide-img {
     position: absolute;

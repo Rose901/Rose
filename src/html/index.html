@@ -1,18 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>My Proftolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Playfair+Display" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
-
-</head>
+@include('./partials/head.html')
 
 <body>
     <div id="homepage">
@@ -27,38 +16,41 @@
 
         </a>
 
+        <a href="/CompletedProjects.html">
+            <div id="block2" class="block">
 
-        <div id="block2" class="block">
-            <div class="title-block">
-                <h2>What Are the Projects I made</h2>
-                <h4><a href="/finishedProjects.html">
+                <div class="title-block">
+                    <h2>Completed Projects</h2>
+                    <h4>
                         <span class="numbers">1.</span> Repiling Doctor<br>
-                        <span class="numbers">2.</span> . Honey App
-                    </a>
-                </h4>
+                        <span class="numbers">2.</span> Honey App
 
+                    </h4>
+                </div>
             </div>
-        </div>
+        </a>
 
-
-        <div id="block3" class="block">
-            <div class="title-block">
-                <h2>The Poroject I am still work on it</h2>
-                <h4><a href="/workingOnIt.html">3.truth lambs<br>
-                        4. little tree
-                    </a></h4>
-
+        <a href="/ProjectsInProgress.html">
+            <div id="block3" class="block">
+                <div class="title-block">
+                    <h2>Projects In Progress</h2>
+                    <h4>3.Truth Lambs<br>
+                        4. Little Tree
+                    </h4>
+                </div>
             </div>
+        </a>
 
-        </div>
 
-
-        <div id="block4" class="block">
-            <div class="title-block">
-                <h2>Contact Me</h2>
-                <h4><a href="contactMe.html">More information about me</a></h4>
+        <a href="contactMe.html">
+            <div id="block4" class="block">
+                <div class="title-block">
+                    <h2>Contact Me</h2>
+                    <h4>More Information About Me</h4>
+                </div>
             </div>
-        </div>
+        </a>
+
     </div>
 
     @include('./partials/icon-menu.html')

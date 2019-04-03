@@ -2,11 +2,10 @@
    width: 100%;
  }*/
 
-h1 {
+/*h2 {
     font-size: 30px;
-    color: green;
-    font-family: cursive;
-}
+    color: $green;
+}*/
 
 .title-part {
     width: 100%;
@@ -18,8 +17,8 @@ h1 {
         justify-content: center;
 
         .icon-img {
-            width: 30px;
-            height: 30px;
+            width: 38px;
+            height: 38px;
         }
     }
 }
@@ -29,7 +28,7 @@ h1 {
         width: 100%;
 
         //transition: all .1s ease-in-out;
-        border: 1px solid green;
+        border: 1px solid $green;
     }
 
     .project-web-row {
@@ -54,6 +53,7 @@ h1 {
     }
 }
 
+//desktop part //////
 @media only screen and (min-width: 600px) {
     .finishedProjects {
         .title-part {
@@ -62,22 +62,15 @@ h1 {
             text-align: center;
             flex-direction: column;
             justify-content: center;
+            margin-top: 120px;
+            padding: 35px 0;
+            justify-content: center;
 
-            .title-text {
-                h1 {
-                    font-size: 48px;
-                }
-
-                margin-top: 120px;
-                padding: 35px 0;
-                justify-content: center;
-
-                .title-coding-icon {
-                    .icon-img {
-                        width: 50px;
-                        height: 50px;
-                        padding: 0;
-                    }
+            .title-coding-icon {
+                .icon-img {
+                    width: 50px;
+                    height: 50px;
+                    padding: 0;
                 }
             }
         }
@@ -92,6 +85,11 @@ h1 {
                 text-align: justify;
                 width: 75%;
                 margin: 0 auto;
+
+                &.honey-app-summary {
+                    display: block;
+                    margin: 0 auto;
+                }
 
                 .project-text {
                     align-self: center;

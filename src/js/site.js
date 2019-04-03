@@ -47,6 +47,7 @@ function refreshSliders() {
 }
 $(document).ready(function () {
 
+
     // todo: if (window.matchMedia("(max-width: 768px)").matches) {
     if ($('#homepage').width() >= mobileBreakpoint) {
         // Start all the animations
@@ -71,7 +72,6 @@ $(document).ready(function () {
     });
 
 
-    // working on it page
     $('.slider-for').slick({
         slidesToShow: 1,
         arrows: false,
@@ -90,13 +90,14 @@ $(document).ready(function () {
         infinite: true,
 
         responsive: [{
-            breakpoint: 700,
+            breakpoint: 600,
             settings: {
                 slidesToShow: 3,
                 arrows: true
             }
         }]
     });
+
     // Ensure sliders are correctly visible on page load
     refreshSliders();
 
@@ -107,6 +108,8 @@ $(document).ready(function () {
             enabled: true
         }
     });
+
+    startAnimatingVisibleElements();
 
 });
 
@@ -151,8 +154,7 @@ function onmouseover(changeWidth) {
 
 })(jQuery);
 
-$(window).scroll(function (event) {
-
+function startAnimatingVisibleElements() {
     $(".animatable").each(function (i, el) {
         var jElement = $(el);
         if (jElement.visible(true) && !jElement.hasClass("animated")) {
@@ -161,7 +163,10 @@ $(window).scroll(function (event) {
             el.parentNode.replaceChild(newone, el);
         }
     });
+}
 
+$(window).scroll(function (event) {
+    startAnimatingVisibleElements();
 });
 
 

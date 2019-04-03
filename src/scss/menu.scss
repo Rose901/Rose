@@ -1,27 +1,95 @@
 .btn2 {
     @include btn(70px, 70px, $menu-btn-width, $menu-btn-height);
+
     .icon {
         @include icon-bar($menu-btn-linewidth, $menu-btn-width, $menu-btn-height / 2);
+
         &:before {
             @include icon-bar($menu-btn-linewidth, $menu-btn-width, -$menu-btn-height / 3);
         }
+
         &:after {
             @include icon-bar($menu-btn-linewidth, $menu-btn-width, $menu-btn-height / 3);
         }
     }
+
     &.open {
         .icon {
             transition-duration: 0.5s;
             background: transparent;
+
             &:before {
                 transform: rotateZ(45deg) scaleX(1.16) translate($menu-btn-width / 4.5, $menu-btn-height / 4.5);
             }
+
             &:after {
                 transform: rotateZ(-45deg) scaleX(1.16) translate($menu-btn-width / 4.5, -$menu-btn-height / 4.5);
             }
         }
     }
+
     &:hover {
         cursor: pointer;
+    }
+}
+
+#icon-menu-page {
+    left: 0vw;
+    right: 0vw;
+    bottom: 0vw;
+    top: 0vw;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+
+    #menu {
+        font-family: Oldtown, fantasy;
+        font-size: 4em;
+        color: gray;
+        text-align: center;
+
+        &:focus, a:hover {
+            text-decoration: none;
+            color: $green;
+        }
+
+        li {
+            list-style: none;
+            line-height: 0.4em;
+            padding-top: 30px;
+        }
+
+        span {
+            font-size: $font-small;
+
+            //font-style: italic;
+            color: $green;
+            margin-bottom: 0px;
+            display: block;
+        }
+    }
+}
+
+#menu li a h2 {
+    &::before,
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 25px;
+        height: 9px;
+        border-top: 1px solid $green;
+        transform: scale(0, 1);
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    &:hover::before {
+        transition: all 0.2s ease-in-out 0s;
+        transform: scale(1.5, 1.5);
+    }
+
+    &:hover::after {
+        transition: all 0.2s ease-in-out 0s;
+        transform: scale(1.5, 1.5);
     }
 }
