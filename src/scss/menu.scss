@@ -1,6 +1,8 @@
 .btn2 {
     @include btn(70px, 70px, $menu-btn-width, $menu-btn-height);
 
+    z-index: 2;
+
     .icon {
         @include icon-bar($menu-btn-linewidth, $menu-btn-width, $menu-btn-height / 2);
 
@@ -47,6 +49,8 @@
         font-size: 4em;
         color: gray;
         text-align: center;
+        width: 80%;
+        margin: auto auto;
 
         &:focus, a:hover {
             text-decoration: none;

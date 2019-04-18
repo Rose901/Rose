@@ -5,47 +5,11 @@
 .workingOnIt {
     text-align: center;
 
-    & .bold-font {
-        color: $green;
-        font-weight: bold;
-    }
-
-    h4 {
-        margin: 60px auto;
-        color: $green;
-    }
-
-    .dark-part {
-        background-color: $dark;
-        color: $light;
-        padding: 40px 0;
-    }
-
-    .mySlides img {
+    .bg-whitesmoke {
+        background-color: whitesmoke;
         width: 100%;
-    }
-
-    img {
-        width: 60%;
-    }
-
-    .web-introduce {
-        text-align: justify;
-        font-size: 18px;
-        color: $dark;
-        letter-spacing: 1px;
-        width: 70%;
-        margin: 70px auto;
-        padding-bottom: 40px;
-        text-align: justify;
-
-        &.light {
-            color: $light;
-        }
-    }
-
-    .web-detail-introduce {
-        margin-bottom: 40px;
+        padding: 25px 0;
+        margin: 50px auto;
 
         .click-big-img {
             padding: 50px auto;
@@ -56,55 +20,100 @@
         }
     }
 
-    .title-part {
-        text-align: center;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 80px;
+    & .bold-font {
+        color: $green;
+        font-weight: bold;
+    }
 
-        .title-coding-icon {
-            .icon-img {
-                width: 30px;
-                height: 30px;
-                padding: 0;
-            }
+    h4 {
+        margin: 30px auto;
+        font-size: 18px;
+        padding: 0 50px;
+
+        //color: $green;
+   
+    }
+
+    //margin-bottom: 30px;
+
+    .web-introduce {
+        text-align: justify;
+        font-size: 18px;
+
+        //color: $dark;
+        letter-spacing: 1px;
+        width: 70%;
+        margin: 30px auto;
+    }
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+.web-detail-introduce {
+    img {
+        width: 60%;
+    }
+
+    .web-detail-img-3 {
+        margin-bottom: 40px;
+    }
+}
+
+.title-part {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+
+    .title-coding-icon {
+        .icon-img {
+            width: 30px;
+            height: 30px;
+            padding: 0;
         }
+    }
 
-        h2 {
-            //background-color: whitesmoke;
-            margin-top: 80px;
-            line-height: 1.5em;
-            padding: 15px 25px;
-            font-size: 28px;
+    h2 {
+        //background-color: whitesmoke;
+        // margin-top: 50px;
+        line-height: 1.5em;
+        padding: 15px 25px;
 
-            //font-weight: bold;
-       
-        }
+        //font-size: 28px;
+
+        //font-weight: bold;
+   
     }
 }
 
 // desktop part/////////
+
 @media only screen and (min-width: 600px) {
     .workingOnIt {
-        text-align: center;
+        .bg-whitesmoke {
+            padding: 45px 0;
+            margin: 10px auto;
+
+            &.other-features-part {
+                padding-bottom: 75px;
+            }
+        }
+
+        h4 {
+            margin: 30px auto;
+            font-size: 25px;
+        }
 
         > .title-part {
-            text-align: center;
             width: 100%;
-
-            //letter-spacing: 8px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: 30px;
-            padding: 35px 0;
-            justify-content: center;
-
-            h2 {
-                font-size: 35px;
-            }
+            margin-top: 120px;
 
             .title-coding-icon {
                 .icon-img {
@@ -116,16 +125,7 @@
         }
 
         > .project-part {
-            //background-color: #d7f0c4;
             width: 100%;
-
-            &.truth-lambs-part {
-                margin-bottom: 150px;
-            }
-
-            h4 {
-                font-size: 28px;
-            }
 
             .slider-nav {
                 position: relative;

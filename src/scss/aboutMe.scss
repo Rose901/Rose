@@ -6,16 +6,17 @@
     padding: 0 10px;
 
     .life2-img {
-        width: 356.67px;
-        height: 356.67px;
+        margin: 0 auto;
     }
 
     .me-top {
         margin-top: 3.5em;
         margin-right: 30px;
         margin-left: -10px;
-        width: 356.67px;
-        height: 356.67px;
+
+        //width: 356.67px;
+        //height: 356.67px;
+   
     }
 }
 
@@ -26,6 +27,7 @@
         animation-name: slideUpCustom;
         animation-duration: 1s;
         animation-fill-mode: forwards; // remain at last keyframe
+   
     }
 }
 
@@ -39,6 +41,7 @@
         animation-name: slide-left;
         animation-duration: 1.5s;
         animation-fill-mode: forwards; // remain at last keyframe
+   
     }
 }
 
@@ -51,6 +54,7 @@
         animation-name: slide-right;
         animation-duration: 1.5s;
         animation-fill-mode: forwards; // remain at last keyframe
+   
     }
 }
 
@@ -78,8 +82,12 @@
     .row {
         .me-top {
             margin-top: 125px;
-            width: 400px;
-            height: 415px;
+            margin-left: auto;
+            margin-right: auto;
+
+            // width: 400px;
+            // height: 415px;
+       
         }
     }
 
@@ -124,7 +132,11 @@
     }
 
     .slide-right-text {
-        margin: 3em;
+        margin-left: 3em;
+    }
+
+    .slide-left-text {
+        margin-right: 3em;
     }
 
     .row .life3-img {

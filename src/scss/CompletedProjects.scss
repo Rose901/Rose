@@ -76,7 +76,12 @@
         }
 
         .projects {
-            margin: 80px auto;
+            //margin: 50px auto;
+
+            .bg-whitesmoke {
+                background: whitesmoke;
+                width: 100%;
+            }
 
             .project-web-row {
                 display: flex;
@@ -105,7 +110,7 @@
 
                 &.project-web-part0,
                 &.project-web-part2 {
-                    margin-top: 80px;
+                    //margin-top: 80px;
 
                     .project-img {
                         order: 0;
